@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Popover</title>
+  </head>
+  <body>
+    <h1 class="display-3 text-center my-4">Popover</h1>
+    <div class="container">
+      <!--popover-->
+      <button
+        class="btn btn-success"
+        data-toggle="popover"
+        data-placement="top"
+        data-html="true"
+        title="Hello World!"
+        data-content="1) Share this free course to a friend 
+                      2) Share on Facebook 
+                      3) Subscribe to my YouTube channel"
+      >
+        Show Popover
+      </button>
+      <button
+        class="btn btn-success"
+        data-toggle="popover"
+        data-placement="right"
+        data-html="true"
+        title="Hello World!"
+        data-content="1) Share this free course to a friend 
+                          2) Share on Facebook 
+                          3) Subscribe to my YouTube channel"
+      >
+        Show Popover
+      </button>
+      <button
+        class="btn btn-success"
+        data-toggle="popover"
+        data-placement="left"
+        data-html="true"
+        title="Hello World!"
+        data-content="1) Share this free course to a friend 
+                          2) Share on Facebook 
+                          3) Subscribe to my YouTube channel"
+      >
+        Show Popover
+      </button>
+      <button
+        class="btn btn-success"
+        data-toggle="popover"
+        data-placement="bottom"
+        data-html="true"
+        title="Hello World!"
+        data-content="1) Share this free course to a friend 
+                          2) Share on Facebook 
+                          3) Subscribe to my YouTube channel"
+      >
+        Show Popover
+      </button>
+      <br /><br />
+      <!-- dismissable popover-->
+      <button
+        class="btn btn-success"
+        data-toggle="popover"
+        data-trigger="focus"
+        data-placement="bottom"
+        data-html="true"
+        title="Hello World!"
+        id="hello"
+        data-content="1) Share this free course to a friend 
+                              2) Share on Facebook 
+                              3) Subscribe to my YouTube channel"
+      >
+        Show Popover
+      </button>
+      <br /><br />
+      <hr />
+      <!--control with js-->
+      <button class="btn btn-info" onClick="showPopover()">
+        Show Popover
+      </button>
+      <button class="btn btn-warning" onClick="hidePopover()">
+        Show Popover
+      </button>
+      <button class="btn btn-danger" onClick="togglePopover()">
+        Show Popover
+      </button>
+    </div>
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      $('[data-toggle="popover"]').popover();
+
+      function showPopover() {
+        $("#hello").popover("show");
+      }
+
+      function hidePopover() {
+        $("#hello").popover("hide");
+      }
+
+      function togglePopover() {
+        $("#hello").popover("toggle");
+      }
+    </script>
+  </body>
+</html>

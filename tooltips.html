@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Tooltips</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <!--Tooltips-->
+      <button
+        class="btn btn-primary"
+        title="Hello World"
+        data-toggle="tooltip"
+        data-placement="top"
+      >
+        Tooltips on Top
+      </button>
+      <button
+        class="btn btn-primary"
+        title="Hello World"
+        data-toggle="tooltip"
+        data-placement="right"
+      >
+        Tooltips on right
+      </button>
+      <button
+        class="btn btn-primary"
+        title="Hello World"
+        data-toggle="tooltip"
+        data-placement="left"
+      >
+        Tooltips on left
+      </button>
+      <button
+        class="btn btn-primary"
+        title="Hello World"
+        data-toggle="tooltip"
+        data-placement="bottom"
+      >
+        Tooltips on Bottom
+      </button>
+
+      <br /><br /><br />
+      <hr />
+
+      <!--Tooltips with HTML-->
+      <button
+        id="hello"
+        class="btn btn-primary"
+        title="<h2>Hello World</h2> <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, laudantium!</p> "
+        data-html="true"
+        data-toggle="tooltip"
+        data-placement="top"
+      >
+        Tooltips on top
+      </button>
+
+      <br /><br />
+      <hr />
+
+      <!--Trigger with js-->
+
+      <button class="btn btn-success" onClick="showToolTip()">
+        Show Tooltip
+      </button>
+      <button class="btn btn-warning" onClick="hideToolTip()">
+        Hide Tooltip
+      </button>
+    </div>
+
+    <script src="js/jquery-slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $('[data-toggle="tooltip"]').tooltip();
+
+      function showToolTip() {
+        $("#hello").tooltip("show");
+      }
+      function hideToolTip() {
+        $("#hello").tooltip("hide");
+      }
+    </script>
+  </body>
+</html>
